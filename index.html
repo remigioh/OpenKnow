@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Sistemas de Gestion de recursos repositorios digitales</title>
+	<meta charset="utf-8">
+	<link href="css/estilo1.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<header>
+    <img src="img/repositorio.jpg" alt="Repositorio de recursos digitales de aprendizaje y difusión del conocimiento" width="276px">
+    <div id="title">Open<br />Know</div>
+    <div id="titulo"><br /><br /> &nbsp; &nbsp; &nbsp;  Repositorio de recursos digitales de aprendizaje y difusión del conocimiento<br /><br /><br /></div>
+</header>
+<nav id="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="share.html"> Share </a></li>
+        <li><a href="edit.html"> Edit </a></li>
+        <li><a href="add.html"> Add </a></li>
+        <li><a href="search.html"> Search </a></li>
+        <li><a href="show.html"> Show </a></li>
+        <li><a href="login.html"> Login </a></li>
+    </ul>
+</nav>
+<div id="app">
+<br /><br />
+ <h1>{{ title }}</h1>
+</div>
+    <script>
+let app = new Vue({
+  el: '#app',
+  data: {
+    title:'Areás de saberes'
+  }
+});
+  </script>
+<div class="categorias">
+
+    <button type="button" class="humanidades" value="Filosofia">Filosofia</button>
+    <button type="button" value="informática" class="STEM" >Informática</button>
+    <button type="button" class="humanidades" value="-">Psicologia</button>
+    <button type="button" value="Química" class="STEM"   >Química</button>
+    <button type="button" class="humanidades" value="historia">Historia</button>
+    <button type="button" value="Ingenierias" class="STEM" >Ingenierias</button>
+    <button type="button" class="humanidades" value="economáa">Economia</button>
+    <button type="button" value="Física" class="STEM" >Física</button>
+    <button type="button" value="Sociología" class="humanidades">Sociología</button>
+    <button type="button" value="Matematicas" class="STEM" >Matematicas</button>
+    <button type="button" value="Educación" class="humanidades">Educación</button>
+    <button type="button" value="Biología" class="STEM" >Biología</button>
+    <button type="button" value="Diseño" class="humanidades">Diseño</button>
+    <button type="button" value="Tecnología" class="STEM">Tecnología</button>
+    <button type="button" value="Espiritualidad" class="humanidades">Espiritualidad</button>
+    <button type="button" value="Geología" class="STEM">Geología</button>   
+    <button type="button" value="Educación" class="humanidades">Artes</button>
+    <button type="button" value="Programación" class="STEM">Programación</button>
+    <button type="button" class="humanidades" value="Politica" class="ciencias">Politica</button>
+    <button type="button" value="Ecología" class="STEM">Ecología</button>
+    <button type="button" class="otras" value="Otras">Otras</button>
+    </div>
+</body>
+</html>

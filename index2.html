@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Sistemas de Gestion de recursos repositorios digitales</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+        body {
+            margin-top: 0;
+			background-color: #0987e3;
+			font-family:tahoma;
+			font-size:14px;
+            width: 100%
+			}
+        header {
+            height: 162px;
+        }
+        #title {
+		font-size:32px;
+        width: 194px;
+        max-width: 100%;
+        height: 131px;
+		color:#064676; 
+		font-family: Arial Black;
+		padding:15px; 
+        background-color: white;
+        margin-top: -164px;
+        margin-left: 275px;
+	}	
+        #titulo {
+		font-size:22px;
+        max-width: 60%
+		color:black; 
+		font-family: tahoma;
+		padding:15px;
+        background-color: white;
+        margin-top: -161px;
+        margin-left: 426px;
+	}
+        h1 {
+            text-align: center;
+            color:white; 
+		    font-family:tahoma;
+        }
+        
+#menu  {
+	        position: absolute;        
+            width:100%;
+            height:40px;
+        }
+ul 	{
+		list-style:none; /* Quita las viñetas de las listas*/
+		}
+		
+#menu ul 	{
+		position:relative;
+		top:-15px;
+        display: flex;
+        left: -40px;
+        width:100%;
+		}
+		
+#menu ul li {
+        flex-grow: 1;
+		}
+
+#menu ul > li {
+			text-align: center;
+			}
+		
+#menu ul li a {
+			font-family: Arial Black;
+            text-decoration: none;
+            display: block;
+            padding: 0.4em;
+            margin-right: 1px;
+             background: -webkit-linear-gradient(white,#2e73a7,#064676);
+               background: -moz-linear-gradient(white,#2e73a7,#064676);
+               background: -o-linear-gradient(white,#2e73a7,#064676);
+                background: -ms-linear-gradient(white,#2e73a7,#064676);
+		}
+		
+#menu ul li  ul	{
+			display:none;  /*Evita que el menu se despliege automaticamente */
+			}
+			
+			
+#menu ul li a:hover{
+				background-color: #f9f9f9;
+				color: black;
+				box-shadow: 0px 0px 25px white;
+				-webkit-box-shadow: 0px 0px 25px white;
+				-moz-box-shadow: 0px 0px 25px white;
+                z-index: 100;
+				}
+			
+#menu ul li:hover ul {
+				display:block;   /* al poner el puntero del mouse sobre el li se despliega el submenu */
+				position:relative;  /* Para que no se corran a la derecha las opciones del submenu al activarlo al pasarle el mouse*/ 
+				top:1px;
+				
+			}		
+				
+#menu ul li ul li {		
+					text-align: left;	
+					}
+		
+a:link{
+	background-color:#000000;
+	color:#ffffff;
+}
+a:visited{
+	background-color:#orange;
+	color:#ffffff;
+}
+a:hover{
+	background-color:#ff00ff;
+	color:#ffffff;
+}
+a:active{
+	background-color:#ff0000;
+	color:#ffff00;
+}
+        
+@media screen and (max-width:650px)   {
+	#titulo {
+		display: none;
+	}
+}	
+    
+    </style>
+	<link href="css/estilo1.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script></script>
+</head>
+<body>
+<header>
+    <img src="img/repositorio.jpg" alt="Repositorio de recursos digitales de aprendizaje y difusión del conocimiento" text-aligment="midle">
+    <div id="title"><b> &nbsp; Open<br /> &nbsp; Know</b></div>
+    <div id="titulo"><br /><br /> &nbsp; &nbsp; &nbsp;  <b>Repositorio de recursos digitales de aprendizaje y difusión del conocimiento</b><br /><br /><br /></div>
+</header>
+<nav id="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="share.html"> Share </a></li>
+        <li><a href="edit.html"> Edit </a></li>
+        <li><a href="add.html"> Add </a></li>
+        <li><a href="search.html"> Search </a></li>
+        <li><a href="show.html"> Show </a></li>
+        <li><a href="login.html"> Login </a></li>
+    </ul>
+</nav>
+<div id="app">
+<br />
+ <h1>{{ title }}</h1>
+  <img :src="image" width="100%" :alt="description">
+</div>
+<script>
+let app = new Vue({
+  el: '#app',
+  data: {
+    title:'Areás de saberes',
+    image:'./img/saberes1.jpg',
+    description: 'Categorias de recursos digitales disponibles'
+  }
+})
+</script>
+</body>
+</html>
