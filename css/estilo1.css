@@ -65,7 +65,7 @@ ul 	{
 			}
 		
 #menu ul li a {
-			font-family: Arial Black;
+	     font-family: Arial Black;
             text-decoration: none;
             display: block;
             padding: 0.7em;
@@ -75,10 +75,6 @@ ul 	{
                background: -o-linear-gradient(white,#2e73a7,#064676);
                 background: -ms-linear-gradient(white,#2e73a7,#064676);
 		}
-		
-#menu ul li  ul	{
-			display:none;  /*Evita que el menu se despliege automaticamente */
-			}
 			
 			
 #menu ul li a:hover{
@@ -87,19 +83,8 @@ ul 	{
 				box-shadow: 0px 0px 25px white;
 				-webkit-box-shadow: 0px 0px 25px white;
 				-moz-box-shadow: 0px 0px 25px white;
-                z-index: 100;
+                		z-index: 100;
 				}
-			
-#menu ul li:hover ul {
-				display:block;   /* al poner el puntero del mouse sobre el li se despliega el submenu */
-				position:relative;  /* Para que no se corran a la derecha las opciones del submenu al activarlo al pasarle el mouse*/ 
-				top:1px;
-				
-			}		
-				
-#menu ul li ul li {		
-					text-align: left;	
-					}
 		
 a:link{
 	background-color:#000000;
