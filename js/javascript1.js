@@ -1,20 +1,22 @@
- const app = Vue.createApp({
+ /* const app = Vue.createApp({
     data() {
         return {
-            title:'Areás de saberes',
-            image:'./img/saberes1.jpg',
-            description: 'Categorias de recursos digitales disponibles'
+            image:'./img/repositorio.jpg',
+            description: 'Repositorio de recursos digitales de aprendizaje y difusión del conocimiento',
+            title:'Areás de saberes'
         }
     }
 });
 
-/*
+*/
 
-let app = new Vue({
+const app = new Vue({
   el: '#app',
   data: {
-    title:'Areás de saberes',
-    image:'./img/saberes1.jpg',
-    description: 'Categorias de recursos digitales disponibles'
+    image:'./img/repositorio.png',
+    description: 'Repositorio de recursos digitales de aprendizaje y difusión del conocimiento',
+    saberes:'Areás de saberes',
+    menu:["Home","Compartir","Editar","Agregar","Buscar","Listar","Login"],
+      categorias: ["Biología","Filosofía","TICs","Educación","Ingenierias","Historia","Artes","Medicina","Economía","Psicología","Química","Espiritualidad","Física","Salud","Matemáticas","Derecho","Electrónica","Administración","Diseño","Politica","Literatura"]
   }
 });
