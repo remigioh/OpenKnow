@@ -12,29 +12,26 @@
             width: 100%
 			}
         header {
-            height: 162px;
+            height: 200px;
         }
         #title {
 		font-size:32px;
-        width: 194px;
+        width: 190px;
         max-width: 100%;
-        height: 131px;
 		color:#064676; 
 		font-family: Arial Black;
-		padding:15px; 
-        background-color: white;
+		padding:10px; 
         margin-top: -164px;
-        margin-left: 275px;
+        margin-left: 150px;
 	}	
         #titulo {
-		font-size:22px;
+		font-size:20px;
         max-width: 60%
 		color:black; 
 		font-family: tahoma;
-		padding:15px;
-        background-color: white;
-        margin-top: -161px;
-        margin-left: 426px;
+		padding:10px;
+        margin-top: -130px;
+        margin-left: 400px;
 	}
         h1 {
             text-align: center;
@@ -42,16 +39,13 @@
 		    font-family:tahoma;
         }
         
-#menu  {
+nav  {
 	        position: absolute;        
             width:100%;
             height:40px;
-        }
-ul 	{
-		list-style:none; /* Quita las viñetas de las listas*/
-		}
-		
-#menu ul 	{
+        }	
+nav ul { 
+        list-style:none;
 		position:relative;
 		top:-15px;
         display: flex;
@@ -59,15 +53,15 @@ ul 	{
         width:100%;
 		}
 		
-#menu ul li {
+nav ul li {
         flex-grow: 1;
 		}
 
-#menu ul > li {
+nav ul > li {
 			text-align: center;
 			}
 		
-#menu ul li a {
+nav ul li a {
 			font-family: Arial Black;
             text-decoration: none;
             display: block;
@@ -78,13 +72,8 @@ ul 	{
                background: -o-linear-gradient(white,#2e73a7,#064676);
                 background: -ms-linear-gradient(white,#2e73a7,#064676);
 		}
-		
-#menu ul li  ul	{
-			display:none;  /*Evita que el menu se despliege automaticamente */
-			}
-			
-			
-#menu ul li a:hover{
+				
+nav ul li a:hover{
 				background-color: #f9f9f9;
 				color: black;
 				box-shadow: 0px 0px 25px white;
@@ -92,18 +81,6 @@ ul 	{
 				-moz-box-shadow: 0px 0px 25px white;
                 z-index: 100;
 				}
-			
-#menu ul li:hover ul {
-				display:block;   /* al poner el puntero del mouse sobre el li se despliega el submenu */
-				position:relative;  /* Para que no se corran a la derecha las opciones del submenu al activarlo al pasarle el mouse*/ 
-				top:1px;
-				
-			}		
-				
-#menu ul li ul li {		
-					text-align: left;	
-					}
-		
 a:link{
 	background-color:#000000;
 	color:#ffffff;
@@ -133,11 +110,11 @@ a:active{
 </head>
 <body>
 <header>
-    <img src="img/repositorio.jpg" alt="Repositorio de recursos digitales de aprendizaje y difusión del conocimiento" text-aligment="midle">
-    <div id="title"><b> &nbsp; Open<br /> &nbsp; Know</b></div>
-    <div id="titulo"><br /><br /> &nbsp; &nbsp; &nbsp;  <b>Repositorio de recursos digitales de aprendizaje y difusión del conocimiento</b><br /><br /><br /></div>
+    <img src="img/repositorio.png" alt="Repositorio de recursos digitales de aprendizaje y difusión del conocimiento" text-aligment="midle">
+    <div id="title"><b>Open<br />Know</b></div>
+    <div id="titulo"><br />Repositorio de recursos digitales de aprendizaje<br />y difusión del conocimiento</div>
 </header>
-<nav id="menu">
+<nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="share.html"> Share </a></li>
@@ -149,7 +126,6 @@ a:active{
     </ul>
 </nav>
 <div id="app">
-<br />
  <h1>{{ title }}</h1>
   <img :src="image" width="100%" :alt="description">
 </div>

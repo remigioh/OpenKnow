@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Sistemas de Gestion de recursos repositorios digitales</title>
+	<meta charset="utf-8">
+	<link href="css/estilo1.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<div id="app">
+<header>
+   <img :src="image" width="263px" :alt="description">
+    <div id="title">Open<br />Know</div>
+    <div id="titulo"><br />Repositorio de recursos digitales de <br />aprendizaje y difusión del conocimiento<br /></div>
+</header>
+<nav>
+    <ul>
+        <li v-for="item in menu"><a>{{item}}</a></li>
+    </ul>
+</nav>
+ <h1>{{ saberes }}</h1>  
+<div class="categorias">
+   <button type="button" value="Biología" class="vida" >Biología</button>
+    <button type="button" class="humanidades" value="Filosofia">Filosofia</button>
+    <button type="button" value="TICS" class="TICs" >TICs</button>
+    <button type="button" value="Educación" class="humanidades">Educación</button>
+    <button type="button" value="Ingenierias" class="STEM" >Ingenierias</button>
+    <button type="button" class="humanidades" value="historia">Historia</button>
+    <button type="button" value="Artes" class="convivencia">Artes</button>
+    <button type="button" value="Medicina" class="vida">Medicina</button>
+    
+    <button type="button" class="convivencia" value="economía">Economia</button>
+    <button type="button" class="humanidades" value="Psicologia">Psicologia</button>
+    
+    <button type="button" value="Química" class="STEM"   >Química</button>
+    <button type="button" value="Espiritualidad" class="humanidades">Espiritualidad</button> 
+    <button type="button" value="Física" class="STEM" >Física</button>
+    <button type="button" value="Literatura" class="humanidades">Literatura</button>
+    <button type="button" value="Matematicas" class="STEM" >Matematicas</button>
+    <button type="button" value="Derecho" class="convivencia">Derecho</button> 
+    <button type="button" value="Electrónica" class="TICs">Electrónica</button> 
+    <button type="button" class="convivencia" value="ADMIN">Administración</button>
+    <button type="button" value="Diseño" class="TICs">Diseño</button>
+    <button type="button" class="convivencia" value="Política" class="ciencias">Política</button>
+    <button type="button" value="Salud" class="vida">Salud</button>
+    
+    </div>
+    </div>    
+    <script src="./js/javascript1.js"></script>
+  <script>
+    const mountedApp = app.mount('#app');
+  </script>
+  </body>
+</body>
+</html>

@@ -1,2 +1,1 @@
-# OpenKnow
-Proyecto de desarrollo de una aplicacion Web de creación y gestión de un repositorio de recursos digitales de aprendizaje y difusión del conocimiento
+Aplicación Web de creacion y gestion de un repositorio de recursos digitales de aprendizaje y de difusión de conocimientos, desarrollado por el Equipo 15 del grupo 56 de la Uinversidad Tecnologica de Pereira, dentro del programa MinTIC 2022
