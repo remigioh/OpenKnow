@@ -1,0 +1,262 @@
+[{
+  "_id": {
+    "$oid": "615d1e8e8fabc8490b4c67b3"
+  },
+  "nombre": "Biología",
+  "color": "#1c5a0a",
+  "page": "/biologia"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5f6"
+  },
+  "nombre": "TICs",
+  "color": "#bbbcb5",
+  "page": "/tics"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5f7"
+  },
+  "nombre": "Filosofía",
+  "color": "#fd8800",
+  "page": "/filos",
+  "subcat": [
+    {
+      "nombre": "Fenomenología",
+      "color": "#35c30c",
+      "page": "/fenomeno"
+    },
+    {
+      "nombre": "Existencialismo",
+      "color": "#fd8800",
+      "page": "/tobe"
+    },
+    {
+      "nombre": "Epistemologia",
+      "color": "#bbbcb5",
+      "page": "/epis"
+    },
+    {
+      "nombre": "Hegel",
+      "color": "#de5246",
+      "page": "/hegel"
+    },
+    {
+      "nombre": "Husserl",
+      "color": "#0d8eef",
+      "page": "/husserl"
+    },
+    {
+      "nombre": "Heidegger",
+      "color": "#b5651d",
+      "page": "/ser"
+    },
+    {
+      "nombre": "Ontologia",
+      "color": "#fd8800",
+      "page": "/onto"
+    },
+    {
+      "nombre": "Deconstrucción",
+      "color": "#35c30c",
+      "page": "/deconst"
+    },
+    {
+      "nombre": "Platon",
+      "color": "#bb7796",
+      "page": "/plato"
+    },
+    {
+      "nombre": "Nietzche",
+      "color": "#b5651d",
+      "page": "/nietz"
+    },
+    {
+      "nombre": "Marxismo",
+      "color": "#0d8eef",
+      "page": "/marx"
+    },
+    {
+      "nombre": "Presocraticos",
+      "color": "#fd8800",
+      "page": "/grecia"
+    },
+    {
+      "nombre": "Metafisica",
+      "color": "#0d8eef",
+      "page": "/meta"
+    },
+    {
+      "nombre": "Analitica",
+      "color": "#35c30c",
+      "page": "/anal"
+    },
+    {
+      "nombre": "Logica",
+      "color": "#0d8eef",
+      "page": "/logica"
+    },
+    {
+      "nombre": "De la ciencia",
+      "color": "#11e5ed",
+      "page": "/science"
+    },
+    {
+      "nombre": "Etica",
+      "color": "#bbbcb5",
+      "page": "/ethics"
+    },
+    {
+      "nombre": "Estetica",
+      "color": "#b5651d",
+      "page": "/estetica"
+    },
+    {
+      "nombre": "Politica",
+      "color": "#35c30c",
+      "page": "/polis"
+    },
+    {
+      "nombre": "Del lenguaje",
+      "color": "#11e5ed",
+      "page": "/leng"
+    },
+    {
+      "nombre": "Estructuralismo",
+      "color": "#de5246",
+      "page": "/structure"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5f8"
+  },
+  "nombre": "Psicología",
+  "color": "#bb7796",
+  "page": "/psique"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5f9"
+  },
+  "nombre": "Pedagogía",
+  "color": "#fd8800",
+  "page": "/pedagogia"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5fa"
+  },
+  "nombre": "Ingenierias",
+  "color": "#064676",
+  "page": "/engineer"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5fb"
+  },
+  "nombre": "Historia",
+  "color": "#b5651d",
+  "page": "/pedagogia"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5fc"
+  },
+  "nombre": "Artes",
+  "color": "#de5246",
+  "page": "/arts"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5fd"
+  },
+  "nombre": "Medicina",
+  "color": "#1c5a0a",
+  "page": "/medicin"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5fe"
+  },
+  "nombre": "Geografia",
+  "color": "#bb7796",
+  "page": "/geografia"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c5ff"
+  },
+  "nombre": "Economía",
+  "color": "#b5651d",
+  "page": "/economia"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c600"
+  },
+  "nombre": "Química",
+  "color": "#064676",
+  "page": "/chem"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c601"
+  },
+  "nombre": "Espiritualidad",
+  "color": "#f8800",
+  "page": "/spirit"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c602"
+  },
+  "nombre": "Física",
+  "color": "#064676",
+  "page": "/physics"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c603"
+  },
+  "nombre": "Salud",
+  "color": "#1c5a0a",
+  "page": "/health"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c604"
+  },
+  "nombre": "Matemáticas",
+  "color": "#064676",
+  "page": "/math"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c605"
+  },
+  "nombre": "Derecho",
+  "color": "#11e5ed",
+  "page": "/law"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c606"
+  },
+  "nombre": "Electrónica",
+  "color": "#bbbcb5",
+  "page": "/electronics"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c607"
+  },
+  "nombre": "Administración",
+  "color": "#b5651d",
+  "page": "/admin"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c608"
+  },
+  "nombre": "Diseño",
+  "color": "#1c5a0a",
+  "page": "/design"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c609"
+  },
+  "nombre": "Politica",
+  "color": "#11e5ed",
+  "page": "/police"
+},{
+  "_id": {
+    "$oid": "615d2e503aed2941d750c60a"
+  },
+  "nombre": "Literatura",
+  "color": "#de5246",
+  "page": "/lit"
+}]
