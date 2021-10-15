@@ -78,11 +78,11 @@ export default {
         {icon:"mdi-home", text:"Inicio", page:"/"},
         {icon:"mdi-information", text:"Acerca de", page:"/about"},
         {icon:"mdi-login", text:"Log in", page:"/login"},
-        {icon:"mdi-folder", text:"Mis archivos", page:"/mi_files"},
+        {icon:"mdi-folder", text:"Mis archivos", page:"/load"},
         {icon:"mdi-database-plus", text:"Agregar", page:"/add"},
-        {icon:"mdi-playlist-edit", text:"Editar", page:"/edit"},
+        //{icon:"mdi-playlist-edit", text:"Editar", page:"/edit"},
         {icon:"mdi-account-multiple", text:"Compartir", page:"/share"},
-        {icon:"mdi-format-list-numbered", text:"Listar", page:"/list"},
+        {icon:"mdi-format-list-numbered", text:"Listar", page:"/listfiles"},
         {icon:"mdi-magnify", text:"Buscar",page:"/search"}
       ],
     }

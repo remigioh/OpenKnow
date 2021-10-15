@@ -44,7 +44,11 @@
       @blur="$v.checkbox.$touch()"
     ></v-checkbox>
 
-    <v-btn class="mr-4" type="submit">Crear cuenta de usuario</v-btn>
+    <v-btn
+      class="mr-4"
+    >
+      Crear cuenta de usuario
+    </v-btn>
     <v-btn @click="clear">
       clear
     </v-btn>
@@ -59,7 +63,7 @@
     mixins: [validationMixin],
 
     validations: {
-      name: { required, maxLength: maxLength(50) },
+      name: { required, maxLength: maxLength(30) },
       password: { required, minLength: minLength(10) },
       email: { required, email },
       select: { required },
@@ -70,11 +74,12 @@
       },
     },
 
-    data () {
-      return {
-      user: {nombre:"", email:"", password:"", pais:""}, 
+    data: () => ({
+      users: [], 
+       user: {}, 
+       agregar: true, 
       name: '', 
-     email: '',
+      email: '',
       select: null,
       items: [
         'Argentina',
@@ -100,25 +105,67 @@
         'Venezuela',
       ],
       checkbox: false,
-      };
+    }),
+
+    computed: {
+      checkboxErrors () {
+        const errors = []
+        if (!this.$v.checkbox.$dirty) return errors
+        !this.$v.checkbox.checked && errors.push('You must agree to continue!')
+        return errors
+      },
+      selectErrors () {
+        const errors = []
+        if (!this.$v.select.$dirty) return errors
+        !this.$v.select.required && errors.push('Pais is required')
+        return errors
+      },
+      nameErrors () {
+        const errors = []
+        if (!this.$v.name.$dirty) return errors
+        !this.$v.name.maxLength && errors.push('Name must be at most 10 characters long')
+        !this.$v.name.required && errors.push('Name is required.')
+        return errors
+      },
+      passwordErrors () {
+        const errors = []
+        if (!this.$v.password.$dirty) return errors
+        !this.$v.password.maxLength && errors.push('Password must be at least 10 characters long')
+        !this.$v.password.required && errors.push('Password is required.')
+        return errors
+      },
+      emailErrors () {
+        const errors = []
+        if (!this.$v.email.$dirty) return errors
+        !this.$v.email.email && errors.push('Must be valid e-mail')
+        !this.$v.email.required && errors.push('E-mail is required')
+        return errors
+      },
     },
 
     methods: {
       agregarUser(){ 
-        //axios.post('http://localhost:3000/api/nuevo-user',
-           this.axios.post('/nuevo-user', this.user) 
+           this.axios.post('nuevo-user', this.user) 
            .then(res => { 
              // Agrega al inicio de nuestro array users 
              //this.users.unshift(res.data); 
-             this.users.push(res.data)
+             this.users.push(res.data);
              this.user.nombre="";
              this.user.email="";
              this.user.password="";
              this.user.pais="";
-             alert("Cuenta de usuario creada exitoxamente");
+             // Alerta de mensaje 
+             this.showAlert(); 
+             this.mensaje.texto = 'Notas Agregada!' 
+             this.mensaje.color = 'success'; 
              }) .catch( e => { 
-               console.log(e.response); 
-               }); 
+               console.log(e.response.data.error.errors.nombre.message); 
+               // Alerta de mensaje 
+               this.showAlert(); 
+               this.mensaje.color = 'danger'; 
+               this.mensaje.texto = e.response.data.error.errors.nombre.message; 
+               }) 
+               this.notas = {} 
                }, 
       submit () {
         this.$v.$touch()

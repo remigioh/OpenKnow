@@ -174,7 +174,8 @@
     "nombre":"Espiritualidad",
     "color":"#f8800",
     "page":"/spirit",
-    [{
+    "subcat":[
+        {
     "nombre":"Misticos cristianos", 
     "color":"#35c30c", 
     "page":"/cristian",
@@ -190,6 +191,51 @@
 {"nombre":"Claudio Naranjo","color":"#0d8eef", "page":"/naranjo"},                       
 {"nombre":"Jean Klein", "color":"#b5651d", "page":"/klein"},
 {"nombre":"Steve Taylor", "color":"#fd8800", "page":"/taylor"},
+{"nombre":"Alan Wats", "color":"#35c30c", "page":"/wats"},
+{"nombre":"Antonio Blay", "color":"#bb7796", "page":"/blay"},
+{"nombre":"Elias Capriles", "color":"#b5651d", "page":"/capriles"},
+{"nombre":"Gurdief", "color":"#0d8eef", "page":"/gurdief"},
+{"nombre":"Krishnamurti", "color":"#fd8800", "page":"/krishna"},
+{"nombre":"Maharshi", "color":"#0d8eef", "page":"/maharshi"},
+{"nombre":"Budismo zen", "color":"#35c30c", "page":"/zen"},
+{"nombre":"Mindfulnees", "color":"#0d8eef", "page":"/mindful"}, 
+{"nombre":"No-Dualismo", "color":"#11e5ed", "page":"/nodual"},
+{"nombre":"Sufismo", "color":"#bbbcb5", "page":"/suphism"},
+{"nombre":"Greco_Latina", "color":"#b5651d", "page":"/grecolat"},
+{"nombre":"Misticos Hindues", "color":"#35c30c", "page":"/india"},
+{"nombre":"Mistica Oriental", "color":"#11e5ed", "page":"/east"},
+{"nombre":"Mistico-filosoficos", "color":"#de5246", "page":"/misfilos"}
+    ]
+},
+{"nombre":"Física", "color":"#064676", "page":"/physics"},
+{"nombre":"Salud", "color":"#1c5a0a", "page":"/health"},
+{"nombre":"Matemáticas", "color":"#064676", "page":"/math"}, 
+{"nombre":"Derecho", "color":"#11e5ed", "page":"/law"},
+{"nombre":"Electrónica", "color":"#bbbcb5", "page":"/electronics"},
+{"nombre":"Administración", "color":"#b5651d", "page":"/admin"},
+{"nombre":"Diseño", "color":"#1c5a0a", "page":"/design"},
+{"nombre":"Politica", "color":"#11e5ed", "page":"/police"},
+{
+    "nombre":"Literatura",
+    "color":"#de5246",
+    "page":"/lit",
+    "subcat":[
+        {
+    "nombre":"Goethe", 
+    "color":"#35c30c", 
+    "page":"/goethe",
+    },
+{
+    "nombre":"Eduardo Gaelano", 
+    "color":"#35c30c", 
+    "page":"/galeano",
+    },       
+{"nombre":"Garcia Marquez", "color":"#fd8800", "page":"/gabo"},             
+{"nombre":"Silo", "color":"#bbbcb5", "page":"/silo"},                   
+{"nombre":"Emerson", "color":"#de5246", "page":"/emerson"},
+{"nombre":"Enrique Dussel","color":"#0d8eef", "page":"/dussel"},                       
+{"nombre":"Isaac Aismov", "color":"#b5651d", "page":"/asimov"},
+{"nombre":"Steve Taylor", "color":"#fd8800", "page":"/taylor"},
 {"nombre":"Alan Wats", "color":"#35c30c", "page":"/deconst"},
 {"nombre":"Antonio Blay", "color":"#bb7796", "page":"/blay"},
 {"nombre":"Elias Capriles", "color":"#b5651d", "page":"/capriles"},
@@ -203,15 +249,7 @@
 {"nombre":"Greco_Latina", "color":"#b5651d", "page":"/grecolat"},
 {"nombre":"Misticos Hindues", "color":"#35c30c", "page":"/india"},
 {"nombre":"Mistica Oriental", "color":"#11e5ed", "page":"/east"},
-{"nombre":"Mistico-filosoficos", "color":"#de5246", "page":"/misfilos"}]
-},
-{"nombre":"Física", "color":"#064676", "page":"/physics"},
-{"nombre":"Salud", "color":"#1c5a0a", "page":"/health"},
-{"nombre":"Matemáticas", "color":"#064676", "page":"/math"}, 
-{"nombre":"Derecho", "color":"#11e5ed", "page":"/law"},
-{"nombre":"Electrónica", "color":"#bbbcb5", "page":"/electronics"},
-{"nombre":"Administración", "color":"#b5651d", "page":"/admin"},
-{"nombre":"Diseño", "color":"#1c5a0a", "page":"/design"},
-{"nombre":"Politica", "color":"#11e5ed", "page":"/police"},
-{"nombre":"Literatura", "color":"#de5246", "page":"/lit"}
+{"nombre":"Mistico-filosoficos", "color":"#de5246", "page":"/misfilos"}
+    ]
+}
 ]
