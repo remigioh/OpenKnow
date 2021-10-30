@@ -17,7 +17,7 @@ export default {
                 {nombre:'Filosofía', color:'#fd8800', page:'/filos'},                   
                 {nombre:'Informática', color:'#bbbcb5', page:'/tics'},                         
                 {nombre:'Psicología', color:'#bb7796', page:'/psique'},
-                {nombre:'Ingenierias',color:'#0978be', page:'/engineer'},
+                {nombre:'Ingenierias',color:'#0978be', page:'/engineers'},
                 {nombre:'Historia', color:'#b5651d', page:'/historia'},                  
                 {nombre:'Pedagogía', color:'#fd8800', page:'/pedagogia'},
                 {nombre:'Artes', color:'#de5246', page:'/arts'},
