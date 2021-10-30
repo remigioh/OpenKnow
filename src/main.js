@@ -12,7 +12,9 @@ Vue.use(VueAxios, axios);
 
 // Agregamos la URL base de nuestra API 
 
-axios.defaults.baseURL = 'https://open-know-api.herokuapp.com/api';
+//axios.defaults.baseURL = 'https://open-know-api.herokuapp.com/api';
+
+axios.defaults.baseURL = 'http://localhost:3000/api';
 
 Vue.use(Vuelidate)
 

@@ -17,6 +17,7 @@
       :rules="nameRules"
       label="Password"
       required
+      type="password"
     ></v-text-field>
 
     <v-btn

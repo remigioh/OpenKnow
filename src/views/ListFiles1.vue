@@ -98,7 +98,7 @@
             <v-card-actions>
               <v-spacer></v-spacer>
               <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="deleteItemConfirm(editedFile)">OK</v-btn>
+              <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
               <v-spacer></v-spacer>
             </v-card-actions>
           </v-card>
@@ -211,7 +211,6 @@ editFile(item) {
                 this.files[index].titulo=res.data.titulo;
                 this.files[index].autor=res.data.autor;
                 this.files[index].path=res.data.path;
-                close();
             })
             .catch(e=>{
 
@@ -226,23 +225,9 @@ editFile(item) {
         this.dialogDelete = true
       },
 
-
-      deleteItemConfirm (item) {
-        this.axios.delete(`/eliminar-file/${item._id}`,item)
-            .then(res=>{
-
-                const index = this.files.findIndex(item=> item._id===res.data._id);
-                this.files.splice(index, 1);
-                //this.editedIndex=this.files.indexOf(item);
-               //this.editedItem=Object.assign({},item);
-            })
-            .catch(e=>{
-
-                  console.log(e.response);
-
-            })
+      deleteItemConfirm () {
         this.files.splice(this.editedIndex, 1)
-        this.closeDelete();
+        this.closeDelete()
       },
 
       close () {
@@ -254,11 +239,11 @@ editFile(item) {
       },
 
       closeDelete () {
-        this.dialogDelete = false;
-      this.$nextTick(() => {
-        this.editedFile = Object.assign({}, this.defaultFile)
-         this.editedIndex = -1
-        });
+        this.dialogDelete = false
+        this.$nextTick(() => {
+          this.editedFile = Object.assign({}, this.defaultFile)
+          this.editedIndex = -1
+        })
       },
 
       save () {
@@ -269,8 +254,8 @@ editFile(item) {
         }
         this.close()
       },
-    }
-  }
+    }, 
+        };
 </script>
 
 <style>

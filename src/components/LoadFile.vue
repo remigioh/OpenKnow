@@ -131,7 +131,7 @@ agregarFile(){
              this.files.push(res.data)
              this.file.titulo="";
              this.file.autor="";
-             this.file.cat_id="";
+             this.file.categoria="";
              this.file.user_id="";
              this.file.path="";
              }) .catch( e => { 

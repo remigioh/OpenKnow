@@ -81,7 +81,7 @@ export default {
         {icon:"mdi-folder", text:"Mis archivos", page:"/load"},
         {icon:"mdi-database-plus", text:"Agregar", page:"/add"},
         //{icon:"mdi-playlist-edit", text:"Editar", page:"/edit"},
-        {icon:"mdi-account-multiple", text:"Compartir", page:"/share"},
+        {icon:"mdi-account-multiple", text:"Compartir", page:"/listcat"},
         {icon:"mdi-format-list-numbered", text:"Listar", page:"/listfiles"},
         {icon:"mdi-magnify", text:"Buscar",page:"/search"}
       ],

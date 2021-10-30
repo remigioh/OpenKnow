@@ -14,6 +14,7 @@
       :error-messages="emailErrors"
       label="E-mail"
       required
+      type="email"
       @input="$v.email.$touch()"
       @blur="$v.email.$touch()"
     ></v-text-field>
@@ -22,6 +23,7 @@
       :error-messages="passwordErrors"
       :counter="10"
       label="Password"
+      type="password"
       required
       @input="$v.name.$touch()"
       @blur="$v.name.$touch()"
@@ -36,7 +38,7 @@
       @blur="$v.select.$touch()"
     ></v-select>
     <v-checkbox
-      v-model="checkbox"
+      v-model="user.data_policy"
       :error-messages="checkboxErrors"
       label="Esta de acuerdo con la politica de tratamiento de datos?"
       required
@@ -46,7 +48,7 @@
 
     <v-btn class="mr-4" type="submit">Crear cuenta de usuario</v-btn>
     <v-btn @click="clear">
-      clear
+      Borrar contenido del formulario
     </v-btn>
   </form>
 </template>
@@ -72,7 +74,8 @@
 
     data () {
       return {
-      user: {nombre:"", email:"", password:"", pais:""}, 
+        users:[],
+      user: {nombre:"", email:"", password:"", pais:"", data_policy:""}, 
       name: '', 
      email: '',
       select: null,
@@ -89,12 +92,15 @@
         'España',
         'Guatemala',
         'Guayana',
+        'Haiti',
         'Honduras',
         'Mexico',
         'Nicaragua',
         'Panama',
         'Paraguay',
         'Peru',
+        'Puerto Rico',
+        'Rep. Dominicana',
         'Salvador',
         'USA',
         'Venezuela',
@@ -110,11 +116,12 @@
            .then(res => { 
              // Agrega al inicio de nuestro array users 
              //this.users.unshift(res.data); 
-             this.users.push(res.data)
+             this.users.push(res.data);
              this.user.nombre="";
              this.user.email="";
              this.user.password="";
-             this.user.pais="";
+            this.user.pais="";
+            this.user.data_policy="";
              alert("Cuenta de usuario creada exitoxamente");
              }) .catch( e => { 
                console.log(e.response); 
@@ -125,10 +132,11 @@
       },
       clear () {
         this.$v.$reset()
-        this.name = ''
-        this.email = ''
-        this.select = null
-        this.checkbox = false
+        this.user.nombre="";
+             this.user.email="";
+             this.user.password="";
+            this.user.pais="";
+            this.user.data_policy="";
       },
     },
   }

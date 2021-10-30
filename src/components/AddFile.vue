@@ -3,38 +3,27 @@
     <h1>Agregar un recurso al repositorio</h1>
     <v-text-field
       v-model="file.titulo"
-      :error-messages="nameErrors"
       :counter="10"
       label="Titulo"
+      placeholder="Escriba el titulo del recurso a agregar"
       required
-      @input="$v.name.$touch()"
-      @blur="$v.name.$touch()"
     ></v-text-field>
 
 <v-text-field
 v-model="file.autor"
-:error-messages="autorErrors"
             label="Autor"
             required
-            placeholder="Placeholder"
+            placeholder="Escriba nombre y apellido del autor"
           ></v-text-field>
-    <!--
-    <v-select
-      v-model="select"
+
+<v-select
+      v-model="file.categoria"
       :items="items"
-      :error-messages="selectErrors"
       label="Area del saber"
+      placeholder="Selecciones área del saber"
       required
-      @change="$v.select.$touch()"
-      @blur="$v.select.$touch()"
     ></v-select>
-    -->
-<v-text-field
-v-model="file.cat_id"
-            label="cat_id"
-            required
-            placeholder="Placeholder"
-          >615d2e503aed2941d750c5f6</v-text-field>
+    <!--
           <v-text-field
 v-model="file.user_id"
             label="user_id"
@@ -42,10 +31,8 @@ v-model="file.user_id"
             placeholder="Placeholder"
           >61660156e196883e68df6796</v-text-field>
 
-<!--
     <v-file-input
     v-model="file.path"
-    :error-messages="filesErrors"
     placeholder="Cargue el archivo a agregar"
     label="Archivo a agregar"
     multiple
@@ -66,7 +53,7 @@ v-model="file.user_id"
 v-model="file.path"
             label="Archivo"
             required
-            placeholder="Placeholder"
+            placeholder="Escriba la ruta y el nombre completo del archivo"
           ></v-text-field>
            <br />  <v-btn class="mr-4" type="submit">Agregar</v-btn>
     <v-btn @click="clear">
@@ -76,21 +63,9 @@ v-model="file.path"
 </template>
 
 <script>
-  import { validationMixin } from 'vuelidate'
-  import { required } from 'vuelidate/lib/validators'
-
-  export default {
-    mixins: [validationMixin],
-
-    validations: {
-      name: { required },
-      autor:{ required },
-      select: { required },
-      files:{ required },
-    },
-
+export default {
     data: () => ({
-     file: {titulo:"", autor:"", cat_id:"615d2e503aed2941d750c5f6", user_id:"61660156e196883e68df6796", path:""},  
+     file: {titulo:"", autor:"", categoria:"", user_id:"61660156e196883e68df6796", path:""},  
       name: '',
       autor:'',
       select: null,
@@ -120,32 +95,6 @@ v-model="file.path"
       files: [],
     }),
 
-    computed: {
-      selectErrors () {
-        const errors = []
-        if (!this.$v.select.$dirty) return errors
-        !this.$v.select.required && errors.push('Area del saber is requerida')
-        return errors
-      },
-      nameErrors () {
-        const errors = []
-        if (!this.$v.name.$dirty) return errors
-        !this.$v.name.required && errors.push('El titulo del archivo is required.')
-        return errors
-      },
-      autorErrors () {
-        const errors = []
-        if (!this.$v.autor.$dirty) return errors
-        !this.$v.autor.required && errors.push('El autor del archivo is required.')
-        return errors
-      },
-      filesErrors () {
-        const errors = []
-        if (!this.$v.files.$dirty) return errors
-        !this.$v.files.required && errors.push('El archivo a agregar is required.')
-        return errors
-      },
-    },
 
     methods: {
 agregarFile(){ 
@@ -154,23 +103,21 @@ agregarFile(){
              this.files.push(res.data)
              this.file.titulo="";
              this.file.autor="";
-             this.file.cat_id="";
+             this.file.categoria="";
              this.file.user_id="";
              this.file.path="";
+             alert("Archivo insertado a la base de datos correctamente.");
              }) .catch( e => { 
                console.log(e.response); 
                }); 
                }, 
 
-      submit () {
-        this.$v.$touch()
-      },
       clear () {
-        this.$v.$reset()
-        this.name = ''
-        this.autor = ''
-        this.select = null
-        this.files = null
+        this.$v.$reset();
+        this.file.titulo = '';
+        this.file.autor = '';
+        this.file.categoria = null;
+        this.file.path = "";
       },
     },
   }
